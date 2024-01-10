@@ -9,6 +9,7 @@ Contact::Contact() {
     Nickname = "";
     LastName = "";
     FirstName = "";
+    std::cout << "C constructor" << std::endl;
 }
 
 //Contact::Contact()
@@ -29,8 +30,8 @@ Contact::Contact(const Contact&)
 
 void Contact::SetContact()
 {
-    std::cout << std::endl;
-    std::cout << "Enter first name : " << std::endl;
+    //std::cout << std::endl;
+    std::cout << std::endl << "Enter first name : " << std::endl;
     std::cin >> this->FirstName;
     this->FirstName = FormatString(this->FirstName);
     
@@ -74,7 +75,7 @@ void Contact::GetInfo()
 void Contact::GetContact() const
 {
     std::cout << "| Index : " <<std::setw(3) << Index << " | First Name : " <<std::setw(10) << FirstName << " | Last Name : " <<std::setw(10) << LastName
-              << " | Nickname : " <<std::setw(10) << Nickname << std::endl;
+              << " | Nickname : " <<std::setw(10) << Nickname << " |" << std::endl;
 }
 
 //index, first name, last name et nickname

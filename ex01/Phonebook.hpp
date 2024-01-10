@@ -16,12 +16,11 @@ class PhoneBook
         void AddContact();
         void DisplayInfo(int index);
        // void SearchContact(void);
-        void ModifyContact(void);
         Contact& GetContactByIndex(int index);
         void DisplayContactByIndex(int index);
 
     private :
-        Contact ContactTab[8];
+        Contact ContactTab[9];
 
 };
 

@@ -19,13 +19,19 @@ Contact& PhoneBook::GetContactByIndex(int index)
 
 void PhoneBook::DisplayInfo(int index)
 {
-    ContactTab[index].GetInfo();
+
+    if (index >=1 && index <=8)
+        ContactTab[index].GetInfo();
+    if (index == 0)
+    {
+        std::cout << "Invalid index " << std::endl;
+    }
 }
 
 void PhoneBook::DisplayContactByIndex(int index)
 {
     ContactTab[index].Index = index;
-    if (index >= 1 && index <=8)
+    if (index >= 1 && index <= 8)
     {
         ContactTab[index].GetContact();
     }
@@ -39,7 +45,7 @@ void PhoneBook::DisplayAllContact()
 {
     int i;
 
-    for (i = 1; i < 8; i++)
+    for (i = 1; i <= 8; i++) // modif < 8
     {
         DisplayContactByIndex(i);
     }
@@ -51,7 +57,7 @@ void PhoneBook::AddContact()
 {
     static int currentIndex = 0;
 
-    ContactTab[(currentIndex % 7) + 1].SetContact();
+    ContactTab[(currentIndex % 8) + 1].SetContact(); // modif % 7
     currentIndex++;
 }
 
