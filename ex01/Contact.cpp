@@ -1,6 +1,7 @@
 #include "Contact.hpp"
 #include "Phonebook.hpp"
 #include <cstring>
+#include <iomanip>
 
 Contact::Contact() {
     PhoneNumber = "";
@@ -46,7 +47,7 @@ void Contact::SetContact()
     //std::cout << "Enter darkest secret : " << std::endl;
     //std::cin >> this->DarkestSecret;
     std::cout << std::endl;
-    std::cout << "\033[1;33mContact Created\033[0m " <<std::endl;
+    std::cout << "\033[1;33mContact Added\033[0m " <<std::endl;
 }
 
 std::string Contact::FormatString(const std::string& str)
@@ -72,8 +73,8 @@ void Contact::GetInfo()
 
 void Contact::GetContact() const
 {
-    std::cout << "| Index : " << Index << " | First Name : " << FirstName << " | Last Name : " << LastName
-              << " | Nickname : " << Nickname << std::endl;
+    std::cout << "| Index : " <<std::setw(3) << Index << " | First Name : " <<std::setw(10) << FirstName << " | Last Name : " <<std::setw(10) << LastName
+              << " | Nickname : " <<std::setw(10) << Nickname << std::endl;
 }
 
 //index, first name, last name et nickname

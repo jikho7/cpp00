@@ -49,9 +49,9 @@ void PhoneBook::DisplayAllContact()
 
 void PhoneBook::AddContact()
 {
-    static int currentIndex = 1;
+    static int currentIndex = 0;
 
-    ContactTab[currentIndex].SetContact();
+    ContactTab[(currentIndex % 7) + 1].SetContact();
     currentIndex++;
 }
 

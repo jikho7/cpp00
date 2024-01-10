@@ -1,0 +1,2 @@
+- pb avec ADD, "hhh kkkk", saute un champ quand espace dans string
+- dans entrer indice, gerer validite de l input + controle autres input
