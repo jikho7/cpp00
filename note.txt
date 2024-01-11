@@ -1,3 +1,2 @@
-- pb avec ADD, "hhh kkkk", saute un champ quand espace dans string
-- dans entrer indice, gerer validite de l input + controle autres input
-- bug si lettre dans "enter index"
+afficher infos entieres et pas en donnees rognees.
+les contacts affiches ne doivent pas avoir de champs vides

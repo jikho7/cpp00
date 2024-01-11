@@ -1,22 +1,10 @@
 #include "Contact.hpp"
 #include "Phonebook.hpp"
-#include <cstring>
-#include <iomanip>
 
-Contact::Contact() {
-    PhoneNumber = "";
-    DarkestSecret = "";
-    Nickname = "";
-    LastName = "";
-    FirstName = "";
-    std::cout << "C constructor" << std::endl;
+Contact::Contact()
+{
+    ;
 }
-
-//Contact::Contact()
-//{
-   //// std::cout << "Contact constructor" << std::endl;
-    //return;
-//}
 
 Contact::~Contact()
 {
@@ -30,25 +18,26 @@ Contact::Contact(const Contact&)
 
 void Contact::SetContact()
 {
-    //std::cout << std::endl;
     std::cout << std::endl << "Enter first name : " << std::endl;
-    std::cin >> this->FirstName;
-    this->FirstName = FormatString(this->FirstName);
+    std::getline(std::cin, this->FirstName);
+    this->FirstName_r = FormatString(this->FirstName);
     
     std::cout << "Enter last name : " << std::endl;
-    std::cin >> this->LastName;
-    this->LastName = FormatString(this->LastName);
+    std::getline(std::cin, this->LastName);
+    this->LastName_r = FormatString(this->LastName);
 
     std::cout << "Enter nickname : " << std::endl;
-    std::cin >> this->Nickname;
-    this->Nickname = FormatString(this->Nickname);
+    std::getline(std::cin, this->Nickname);
+    this->Nickname_r = FormatString(this->Nickname);
 
-    //std::cout << "Enter phone number : " << std::endl;   
-    //std::cin >> this->PhoneNumber; 
-    //std::cout << "Enter darkest secret : " << std::endl;
-    //std::cin >> this->DarkestSecret;
+    std::cout << "Enter phone number : " << std::endl;   
+    std::getline(std::cin, this->PhoneNumber);
+
+    std::cout << "Enter darkest secret : " << std::endl;
+    std::getline(std::cin, this->DarkestSecret);
+
     std::cout << std::endl;
-    std::cout << "\033[1;33mContact Added\033[0m " <<std::endl;
+    std::cout << "\033[1;33mContact Added\033[0m " <<std::endl <<std::endl;
 }
 
 std::string Contact::FormatString(const std::string& str)
@@ -57,13 +46,12 @@ std::string Contact::FormatString(const std::string& str)
     
     if (NewStr.length() > 10)
     {
-        NewStr = str.substr(0, 9) + '.';
-        //std::cout << "new string " <<  NewStr <<std::endl;
+        NewStr = NewStr.substr(0, 9) + '.';
     }
     return NewStr;
 }
 
-void Contact::GetInfo()
+void Contact::GetInfo() const
 {
     std::cout << "First Name : " << FirstName << std::endl;
     std::cout << "Last Name : " << LastName << std::endl;
@@ -74,8 +62,6 @@ void Contact::GetInfo()
 
 void Contact::GetContact() const
 {
-    std::cout << "| Index : " <<std::setw(3) << Index << " | First Name : " <<std::setw(10) << FirstName << " | Last Name : " <<std::setw(10) << LastName
-              << " | Nickname : " <<std::setw(10) << Nickname << " |" << std::endl;
+    std::cout << "| Index : " <<std::setw(3) << Index << " | First Name : " <<std::setw(10) << FirstName_r << " | Last Name : " <<std::setw(10) << LastName_r
+              << " | Nickname : " <<std::setw(10) << Nickname_r << " |" << std::endl;
 }
-
-//index, first name, last name et nickname

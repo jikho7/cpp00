@@ -1,9 +1,10 @@
 #ifndef PHONEBOOK_H
 #define PHONEBOOk_H
 
+#include "Contact.hpp"
 #include <iostream>
 #include <cstring>
-#include "Contact.hpp"
+#include <cstdlib>
 #include <iomanip>
 
 class PhoneBook
@@ -15,7 +16,6 @@ class PhoneBook
         void DisplayAllContact();
         void AddContact();
         void DisplayInfo(int index);
-       // void SearchContact(void);
         Contact& GetContactByIndex(int index);
         void DisplayContactByIndex(int index);
 
@@ -24,13 +24,6 @@ class PhoneBook
 
 };
 
-// class Adresse {
-// public:
-//     std::string rue;
-//     int numero;
-
-//     Adresse(const std::string& r, int num) : rue(r), numero(num) {}
-// };
 #endif
 
 /*

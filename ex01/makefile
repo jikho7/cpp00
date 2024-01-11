@@ -1,16 +1,16 @@
 NAME = PhoneBook
-CPPFLAGS = -Wall -Werror -Wall -std=c++98
-CC = g++
+CXXFLAGS = -Wall -Werror -Wall -std=c++98
+CXX = g++
 SRC =  main.cpp Phonebook.cpp Contact.cpp
 OBJ := $(SRC:%.cpp=%.o)
 
 all: $(NAME)
 
 .c.o:
-	${CC} ${CPPFLAGS} -I. -c $< -o ${<:.c=.o}
+	${CC} ${CXXLAGS} -I. -c $< -o ${<:.c=.o}
 
 $(NAME): $(OBJ)
-	$(CC) $(CPPFLAGS) $(OBJ) -o $(NAME)
+	$(CXX) $(CXXFLAGS) $(OBJ) -o $(NAME)
 
 clean:
 	rm -f $(OBJ)
