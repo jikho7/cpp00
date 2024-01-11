@@ -7,9 +7,9 @@ int main()
     std::string Choice;
     int index = 1;
 
-    std::cout <<std::endl;
-    std::cout << "\033[1mSelect one : \033[0m" << '\n' <<std::endl;
-    std::cout << "\033[38;2;237;127;16m> ADD\033[0m" <<std::endl << "\033[38;2;237;127;16m> SEARCH\033[0m" <<std::endl << "\033[38;2;237;127;16m> EXIT\033[0m" <<std::endl <<std::endl;
+    std::cout << "\n";
+    std::cout << "\033[1mSelect one : \033[0m" << '\n' << '\n';
+    std::cout << "\033[38;2;237;127;16m> ADD\033[0m" << '\n' << "\033[38;2;237;127;16m> SEARCH\033[0m" << '\n' << "\033[38;2;237;127;16m> EXIT\033[0m" << '\n' <<std::endl;
     while(1)
     {
         std::getline(std::cin, Choice);
@@ -22,7 +22,8 @@ int main()
             PhoneBook.DisplayAllContact();
             std::cout << std::endl << "\033[1mEnter Index : \033[0m" <<std::endl;
             std::cin >> index;
-            if (std::cin.fail()) {
+            if (std::cin.fail())
+            {
                 std::cerr << "Index not valid" << std::endl;
                 std::cin.clear();
             }
@@ -35,9 +36,9 @@ int main()
         }
         else
         {
-            std::cout <<std::endl;
-            std::cout << "\033[1mSelect one : \033[0m" << '\n' <<std::endl;
-            std::cout << "\033[38;2;237;127;16m> ADD\033[0m" <<std::endl << "\033[38;2;237;127;16m> SEARCH\033[0m" <<std::endl << "\033[38;2;237;127;16m> EXIT\033[0m" <<std::endl <<std::endl;
+            std::cout << "\n";
+            std::cout << "\033[1mSelect one : \033[0m" << '\n' << '\n';
+            std::cout << "\033[38;2;237;127;16m> ADD\033[0m" << '\n' << "\033[38;2;237;127;16m> SEARCH\033[0m" << '\n' << "\033[38;2;237;127;16m> EXIT\033[0m" << '\n' <<std::endl;
         }
     }
     return (0);

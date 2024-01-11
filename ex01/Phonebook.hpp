@@ -20,8 +20,7 @@ class PhoneBook
         void DisplayContactByIndex(int index);
 
     private :
-        Contact ContactTab[9];
-
+        Contact _ContactTab[9];
 };
 
 #endif

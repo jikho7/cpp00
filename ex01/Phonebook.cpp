@@ -14,14 +14,14 @@ PhoneBook::~PhoneBook()
 
 Contact& PhoneBook::GetContactByIndex(int index)
 {
-    return ContactTab[index];
+    return _ContactTab[index];
 }
 
 void PhoneBook::DisplayInfo(int index)
 {
 
     if (index >=1 && index <=8)
-        ContactTab[index].GetInfo();
+        _ContactTab[index].GetInfo();
     else
     {
         std::cout << "Index not valid " << std::endl;
@@ -30,10 +30,10 @@ void PhoneBook::DisplayInfo(int index)
 
 void PhoneBook::DisplayContactByIndex(int index)
 {
-    ContactTab[index].Index = index;
+    _ContactTab[index].Index = index;
     if (index >= 1 && index <= 8)
     {
-        ContactTab[index].GetContact();
+        _ContactTab[index].GetContact();
     }
     else
     {
@@ -56,7 +56,7 @@ void PhoneBook::AddContact()
 {
     static int currentIndex = 0;
 
-    ContactTab[(currentIndex % 8) + 1].SetContact();
+    _ContactTab[(currentIndex % 8) + 1].SetContact();
     currentIndex++;
 }
 

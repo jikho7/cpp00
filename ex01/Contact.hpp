@@ -9,25 +9,24 @@ class  Contact
 {
 
     public :
-    Contact();
-    ~Contact();
-    Contact(const Contact&);
-    void GetContact(void) const;
-    void SetContact(void);
-    void GetInfo() const;
-    std::string FormatString(const std::string& str);
- 
-    int   Index;
+        Contact();
+        ~Contact();
+        Contact(const Contact&);
+        void GetContact(void) const;
+        void SetContact(void);
+        void GetInfo() const;
+        std::string FormatString(const std::string& str);
+        int   Index;
     
     private :
-    std::string PhoneNumber;
-    std::string DarkestSecret ;
-    std::string Nickname;
-    std::string LastName;
-    std::string FirstName;
-    std::string Nickname_r;
-    std::string LastName_r;
-    std::string FirstName_r;
+        std::string _PhoneNumber;
+        std::string _DarkestSecret ;
+        std::string _Nickname;
+        std::string _LastName;
+        std::string _FirstName;
+        std::string _Nickname_r;
+        std::string _LastName_r;
+        std::string _FirstName_r;
 };
 
 #endif 
