@@ -3,8 +3,7 @@
 
 int main(int ac, char** av)
 {
-	int i;
-	int j = 0;
+	int i, j = 0;
 	char c;
 
 	if (ac == 1)
@@ -20,4 +19,3 @@ int main(int ac, char** av)
 	std::cout <<std::endl;
 	return(0);
 }
-
