@@ -1,2 +1,0 @@
-afficher infos entieres et pas en donnees rognees.
-les contacts affiches ne doivent pas avoir de champs vides
