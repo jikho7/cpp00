@@ -3,7 +3,7 @@
 
 int main()
 {
-	PhoneBook   PhoneBook;
+	Phonebook   Phonebook;
 	std::string Choice;
 	int index = 1;
 
@@ -15,14 +15,14 @@ int main()
 		std::getline(std::cin, Choice);
 		if (Choice.compare(0, 4, "ADD") == 0)
 		{
-			PhoneBook.AddContact();
+			Phonebook.AddContact();
 		}
 		else if (Choice.compare(0, 7, "SEARCH") == 0)
 		{
 			std::cout << "_____________________________________________" << std::endl;
 			std::cout << "|     \033[1;33mIndex\033[0m" << "|\033[1;33mFirst Name\033[0m" <<  "| \033[1;33mLast Name\033[0m" << "|  \033[1;33mNickname\033[0m|" << '\n';
 			std::cout << "_____________________________________________" << std::endl;
-			PhoneBook.DisplayAllContact();
+			Phonebook.DisplayAllContact();
 			std::cout << "_____________________________________________" << std::endl;
 			std::cout << std::endl << "\033[1mEnter Index : \033[0m" <<std::endl;
 			std::cin >> index;
@@ -32,7 +32,7 @@ int main()
 				std::cin.clear();
 			}
 			else
-				PhoneBook.DisplayInfo(index);
+				Phonebook.DisplayInfo(index);
 		}
 		else if (Choice.compare(0, 5, "EXIT") == 0)
 		{

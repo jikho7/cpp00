@@ -1,5 +1,5 @@
-#ifndef PHONEBOOK_H
-#define PHONEBOOK_H
+#ifndef Phonebook_H
+#define Phonebook_H
 
 #include "Contact.hpp"
 #include <iostream>
@@ -7,12 +7,11 @@
 #include <cstdlib>
 #include <iomanip>
 
-class PhoneBook
+class Phonebook
 {
     public:
-        PhoneBook();
-        ~PhoneBook();
-        PhoneBook(const PhoneBook&); // Constructeur de copie, si pas d alloc dynamique, laisser par defaut
+        Phonebook();
+        ~Phonebook();
         void DisplayAllContact();
         void AddContact();
         void DisplayInfo(int index);

@@ -1,4 +1,4 @@
-NAME = phonebook
+NAME = Phonebook
 CXXFLAGS = -Wall -Werror -Wall -std=c++98
 CXX = g++
 SRC =  main.cpp Phonebook.cpp Contact.cpp

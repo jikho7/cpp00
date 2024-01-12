@@ -1,5 +1,5 @@
 NAME = megaphone
-SRC = megaphone.cpp
+SRC = Megaphone.cpp
 OBJ = ${SRC:.cpp=.o}
 CXXFLAGS = -Wall -Werror -Wextra -std=c++98
 CXX = g++

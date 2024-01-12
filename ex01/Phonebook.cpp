@@ -1,72 +1,71 @@
 #include "Contact.hpp"
 #include "Phonebook.hpp"
 
-PhoneBook::PhoneBook()
+Phonebook::Phonebook()
 {
-    //std::cout << "PhoneBook Construtor" <<std::endl;
-    return;
+	return;
 }
 
-PhoneBook::~PhoneBook()
+Phonebook::~Phonebook()
 {
-    return;
+	return;
 }
 
-Contact& PhoneBook::GetContactByIndex(int index)
+Contact& Phonebook::GetContactByIndex(int index)
 {
-    return _ContactTab[index];
+	return _ContactTab[index];
 }
 
-void PhoneBook::DisplayInfo(int index)
+void Phonebook::DisplayInfo(int index)
 {
 
-    if (index >=1 && index <=8)
-        _ContactTab[index].GetInfo();
-    else
-    {
-        std::cout << "Index not valid " << std::endl;
-    }
+	if (index >=1 && index <=8)
+		_ContactTab[index].GetInfo();
+	else
+	{
+		std::cout << "Index not valid " << std::endl;
+	}
 }
 
-void PhoneBook::DisplayContactByIndex(int index)
+void Phonebook::DisplayContactByIndex(int index)
 {
-    _ContactTab[index].Index = index;
-    if (index >= 1 && index <= 8)
-    {
-        _ContactTab[index].GetContact();
-    }
-    else
-    {
-        std::cout << "Index not valid " << std::endl;
-    }
+	_ContactTab[index].Index = index;
+	if (index >= 1 && index <= 8)
+	{
+		_ContactTab[index].GetContact();
+	}
+	else
+	{
+		std::cout << "Index not valid " << std::endl;
+	}
 }
 
-void PhoneBook::DisplayAllContact()
+void Phonebook::DisplayAllContact()
 {
-    int i;
+	int i;
 
-    for (i = 1; i <= 8; i++)
-    {
-        DisplayContactByIndex(i);
-    }
-    return;
+	for (i = 1; i <= 8; i++)
+	{
+		DisplayContactByIndex(i);
+	}
+	return;
 }
 
-void PhoneBook::AddContact()
+void Phonebook::AddContact()
 {
-    static int currentIndex = 0;
+	static int currentIndex = 0;
 
-    _ContactTab[(currentIndex % 8) + 1].SetContact();
-    currentIndex++;
+	_ContactTab[(currentIndex % 8) + 1].SetContact();
+	currentIndex++;
 }
 
-//PhoneBook::
+//Phonebook::
 
 /*
-    Prototype de l'opérateur d'affectation
-        T& T::operator=(const T&)
-    Prototype du constructeur de recopie
-        T::T(const T&)
-    Prototype de l'opérateur d'affectation
-        T& T::operator=(const T&)
+	Prototype de l'opérateur d'affectation
+		T& T::operator=(const T&)
+	Prototype du constructeur de recopie
+		T::T(const T&)
+	Prototype de l'opérateur d'affectation
+		T& T::operator=(const T&)
 */
