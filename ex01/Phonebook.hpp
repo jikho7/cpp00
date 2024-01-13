@@ -19,7 +19,8 @@ class Phonebook
         void DisplayContactByIndex(int index);
 
     private :
-        Contact _ContactTab[9];
+        static int _currentIndex;
+        Contact _ContactTab[8];
 };
 
 #endif
